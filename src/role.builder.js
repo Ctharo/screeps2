@@ -1,9 +1,9 @@
-import { STATES } from './config.js';
-import { runState, setState } from './stateMachine.js';
-import { moveToCached } from './pathCache.js';
-import { getTask } from './taskManager.js';
+const { STATES } = require('../config');
+const { runState, setState } = require('../utils/stateMachine');
+const { moveToCached } = require('../systems/pathCache');
+const { getTask } = require('../systems/taskManager');
 
-export function run(creep) {
+function run(creep) {
 
     if (!creep.memory.task) {
         getTask(creep);
@@ -36,7 +36,6 @@ export function run(creep) {
                     moveToCached(creep, site);
                 }
             } else {
-                // No construction → upgrade instead
                 setState(creep, STATES.UPGRADE);
             }
         },
@@ -56,3 +55,5 @@ export function run(creep) {
         }
     });
 }
+
+module.exports = { run };
