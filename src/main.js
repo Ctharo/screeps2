@@ -17,7 +17,7 @@ function safeRun(label, fn) {
     } catch (e) {
         console.log(`[ERROR] ${label}: ${e.stack}`);
     }
-}
+};
 
 function cleanupMemory() {
     for (const name in Memory.creeps) {
@@ -25,7 +25,7 @@ function cleanupMemory() {
             delete Memory.creeps[name];
         }
     }
-}
+};
 
 module.exports.loop = function () {
 
