@@ -1,4 +1,4 @@
-import { ROLES, STATES } from '../config.js';
+import { ROLES, STATES } from './config.js';
 
 export function runSpawns() {
     const spawn = Game.spawns['Spawn1'];

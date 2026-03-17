@@ -1,9 +1,9 @@
-import { runSpawns } from './systems/spawnManager.js';
-import { initTasks } from './systems/taskManager.js';
+import { runSpawns } from './spawnManager.js';
+import { initTasks } from './taskManager.js';
 
-import * as harvester from './roles/role.harvester.js';
-import * as builder from './roles/role.builder.js';
-import * as upgrader from './roles/role.upgrader.js';
+import * as harvester from './role.harvester.js';
+import * as builder from './role.builder.js';
+import * as upgrader from './role.upgrader.js';
 
 const roleMap = {
     harvester,

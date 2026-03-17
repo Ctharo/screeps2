@@ -1,7 +1,7 @@
-import { STATES } from '../config.js';
-import { runState, setState } from '../utils/stateMachine.js';
-import { moveToCached } from '../systems/pathCache.js';
-import { getTask, completeTask } from '../systems/taskManager.js';
+import { STATES } from './config.js';
+import { runState, setState } from './stateMachine.js';
+import { moveToCached } from './pathCache.js';
+import { getTask, completeTask } from './taskManager.js';
 
 export function run(creep) {
 
